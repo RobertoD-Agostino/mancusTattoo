@@ -1,0 +1,134 @@
+/* IMPOSTAZIONI GENERALI */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+
+--black : rgb(24,24,24);
+--grey : rgb(38,38,38);
+--white : rgb(255,255,255);
+}
+
+.textBlack{
+    color: var(--black);
+}
+
+.textWhite{
+    color: var(--white);
+}
+
+h1,h2,h3,h4,h5{
+font-family: 'Roboto', sans-serif;
+
+}
+
+body{
+    /* background-color: var(--grey); */
+    background-image: url(/media/sfondoForm.jpg);
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */
+    
+}
+
+p{
+font-family: 'Schibsted Grotesk', sans-serif;
+}
+
+/* NAVBAR */
+nav{
+    background-color: var(--black);
+}
+
+.nav-link{
+    transition: 0.5s;   
+}
+
+.nav-link:hover{
+    color: var(--white);
+    border-bottom: 2px solid var(--white);
+    padding-bottom: 0px;
+    font-weight: 600;
+}
+
+.logoSito{
+    width: 45px;
+    color: var(--white);
+}
+
+.nav-item{
+   margin-right: 85px;
+}
+
+.titoloHeader{
+    color: var(--white);
+    font-size: 120px;
+}
+
+
+
+
+/* FORM */
+.formRow{
+    width: 2000px;
+    background-color: var(--black);
+    margin-top: 100px;
+    height: 940px;
+}
+
+.colForm{
+    width: 800px;
+}
+
+.titoli{
+    color: aliceblue;
+}
+
+@media (max-width: 767px){
+    .colForm{
+        width: 400px;
+    }
+    
+}
+
+@media (max-width: 400px){
+    .colForm{
+        width: 250px;
+    }
+    
+}
+
+/* FOOTER */
+.footerRow{
+    margin-top: 180px;
+    background-color: var(--black);
+}
+
+.btnEmailFooter{
+    color: var(--grey);
+}
+
+.inputEmail{
+    border-radius: 20px;
+}
+
+.infoFooter{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (max-width: 767px){
+    .footerClass{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+
