@@ -61,7 +61,6 @@ nav{
 .hamburger-menu{
     height: 45px;
     width: 45px;
-    /* background-color: red; */
     position: relative;
     cursor: pointer;
     padding: 1rem;
@@ -103,7 +102,7 @@ nav{
 
 /* HEADER */
 .header{
-    background: url("./media/header.jpg");
+    background: url("/media/header.jpg");
     background-position: center;
     /* background-attachment: fixed; */
     height: 730px;
@@ -152,38 +151,171 @@ nav{
 
     .vertical{
         display: none;
+       
     }
 
 
 }
 
 
-/* ACCORDION */
-
-.accordionRow{
+/* ACCORDION BOOTSTRAP*/
+/* .accordionRow{
     margin-top: 180px;
-    /* background-color: var(--black); */
     height: fit-content;
     min-height: 400px;
     height: 500px;
+    background-image: url("/media/header.jpg");
+    background-position: center;
+    
 }
 
 .colAccordion{
-    width: 800px;
-    min-width: 387px
+    width: 600px;
+    min-width: 387px;
+    
 }
 
 .h1Accordion{
     width: fit-content;
     color: var(--white);  
-    margin-bottom: 40px;
+}
+
+.accordion-button{
+    background-color: var(--grey);
+    color: var(--white);
+}
+
+.accordion-item{
+    border: none;
+}
+
+.accordion-button:not(.collapsed){
+    background-color: var(--white);
+    color: var(--black);
+}
+
+.accordion-body{
+    background-color: var(--grey);
+    color: var(--white);
+}
+
+.accordion-button::after{
+    background-color: var(--white);
+    border-radius: 5px;
+}
+
+.accordion-button:focus{
+    box-shadow: none;
+} */
+
+
+/* ACCORDION TRE */
+.accordion-row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.col-accordion{
 }
 
 .accordion-container{
-    background-image: url("./media/header.jpg");
-    background-position: center;
-    /* background-attachment: fixed;  */
+    margin: 0 40px;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
+
+
+.accordion-container .tab{
+    position: relative;
+    background-color: cadetblue;
+    padding: 0 20px 20px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.accordion-container .tab input{
+    appearance: none;
+}
+
+.accordion-container .tab label{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.accordion-container .tab label::after{
+    content: '+';
+    position: absolute;
+    right: 20px;
+    font-size: 2em;
+    color: rgba(0, 0, 0, 0.1);
+    transition: transform 1s;
+}
+
+.accordion-container .tab:hover label::after{
+    color: #333;
+}
+
+.accordion-container .tab input:checked ~ label::after{
+    transform: rotate(135deg);
+}
+
+.accordion-container .tab h2{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    color: #fff;
+    font-weight: 500px;
+    font-size: 1.25em;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.accordion-container .tab h3{
+    position: relative;
+    font-weight: 500;
+    color: #333;
+    z-index: 10;
+}
+
+
+.accordion-container .tab .content{
+    max-height: 0;
+    transition: 1s;
+    overflow: hidden;
+}
+
+.accordion-container .tab input:checked ~ .content{
+    max-height: 100vh;
+}
+
+.accordion-container .tab .content p{
+    position: relative;
+    padding: 10px 0;
+    color: #fff;
+    z-index: 10;
+}
+
+.accordion-container .tab input:checked ~  h2{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: rgba(255, 255, 255, 0.2);
+    font-size: 8em;
+    justify-content: flex-end;
+    padding: 20px;
+}
+
 
 
 /* FOOTER */

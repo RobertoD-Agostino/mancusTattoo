@@ -1,5 +1,14 @@
+import * as hamburger from "../js/hamburger.js"; 
+// import * as accordion from "../js/accordion.js";
+// accordion.initAccordion()
+hamburger.initHamburger()
+
+
+
+
 //getting all required elements
-const gallery  = document.querySelectorAll(".image"),
+document.addEventListener('DOMContentLoaded', function() {
+    const gallery  = document.querySelectorAll(".image"),
 previewBox = document.querySelector(".preview-box"),
 previewImg = previewBox.querySelector("img"),
 closeIcon = previewBox.querySelector(".icon"),
@@ -67,7 +76,5 @@ window.onload = ()=>{
         
     } 
 }
-
-
-
-
+  });   
+  
