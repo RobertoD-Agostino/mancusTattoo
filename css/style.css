@@ -8,7 +8,7 @@
 
 --black : rgb(24,24,24);
 --grey : rgb(38,38,38);
---white : rgb(255,255,255);
+--white : #fff;
 }
 
 .textBlack{
@@ -101,18 +101,39 @@ nav{
 }
 
 /* HEADER */
-.header{
+.header {
     background: url("/media/header.jpg");
     background-position: center;
-    /* background-attachment: fixed; */
-    height: 730px;
-    
+    height: 100vh; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-
+  
 .titoloHeader{
     color: var(--white);
-    font-size: 120px;
+    font-size: 120px; 
+    text-align: center;
 }
+ 
+@media screen and (max-width: 455px) {
+    .titoloHeader {
+      font-size: 80px;
+    }
+}  
+
+@media screen and (max-width: 315px) {
+    .titoloHeader {
+      font-size: 50px;
+    }
+} 
+  
+@media screen and (max-width: 170px) {
+    .titoloHeader {
+      font-size: 30px;
+    }
+}  
+
 
 /* SEZIONE SOTTO HEADER */
 .sottoHeader{
@@ -158,80 +179,23 @@ nav{
 }
 
 
-/* ACCORDION BOOTSTRAP*/
-/* .accordionRow{
-    margin-top: 180px;
-    height: fit-content;
-    min-height: 400px;
-    height: 500px;
-    background-image: url("/media/header.jpg");
-    background-position: center;
-    
-}
-
-.colAccordion{
-    width: 600px;
-    min-width: 387px;
-    
-}
-
-.h1Accordion{
-    width: fit-content;
-    color: var(--white);  
-}
-
-.accordion-button{
-    background-color: var(--grey);
-    color: var(--white);
-}
-
-.accordion-item{
-    border: none;
-}
-
-.accordion-button:not(.collapsed){
-    background-color: var(--white);
-    color: var(--black);
-}
-
-.accordion-body{
-    background-color: var(--grey);
-    color: var(--white);
-}
-
-.accordion-button::after{
-    background-color: var(--white);
-    border-radius: 5px;
-}
-
-.accordion-button:focus{
-    box-shadow: none;
-} */
-
-
-/* ACCORDION TRE */
-.accordion-row{
+/* ACCORDION */
+/* .accordion-row{
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-}
-
-.col-accordion{
-}
+} */
 
 .accordion-container{
-    margin: 0 40px;
+    margin-top: 150px;
     max-width: 600px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
 }
 
 
 .accordion-container .tab{
     position: relative;
-    background-color: cadetblue;
+    background-color: var(--white);
     padding: 0 20px 20px;
     box-shadow: 0 15px 25px rgba(0, 0, 0, 0.05);
     border-radius: 5px;
@@ -242,7 +206,7 @@ nav{
     appearance: none;
 }
 
-.accordion-container .tab label{
+.container .tab label{
     display: flex;
     align-items: center;
     cursor: pointer;
@@ -255,15 +219,23 @@ nav{
     font-size: 2em;
     color: rgba(0, 0, 0, 0.1);
     transition: transform 1s;
+    z-index: 1;
 }
 
 .accordion-container .tab:hover label::after{
     color: #333;
 }
 
+/* .accordion-container .tab input:checked ~ label::after{
+    transform: rotate(135deg);
+}  */
+
+
 .accordion-container .tab input:checked ~ label::after{
     transform: rotate(135deg);
+    color: var(--white);
 }
+
 
 .accordion-container .tab h2{
     width: 40px;
@@ -271,8 +243,8 @@ nav{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #fff;
-    color: #fff;
+    background-color: var(--black);
+    color: var(--white);
     font-weight: 500px;
     font-size: 1.25em;
     border-radius: 5px;
@@ -282,11 +254,13 @@ nav{
 .accordion-container .tab h3{
     position: relative;
     font-weight: 500;
-    color: #333;
+    color: var(--grey);
     z-index: 10;
 }
 
-
+.accordion-container .tab h3::after{
+    color: var(--white);
+}
 .accordion-container .tab .content{
     max-height: 0;
     transition: 1s;
@@ -300,7 +274,7 @@ nav{
 .accordion-container .tab .content p{
     position: relative;
     padding: 10px 0;
-    color: #fff;
+    color: var(--white);
     z-index: 10;
 }
 
@@ -311,25 +285,19 @@ nav{
     width: 100%;
     height: 100%;
     color: rgba(255, 255, 255, 0.2);
+    background-color: var(--black);
     font-size: 8em;
     justify-content: flex-end;
     padding: 20px;
 }
 
+  
 
 
 /* FOOTER */
 .footerRow{
     margin-top: 180px;
     background-color: var(--black);
-}
-
-.btnEmailFooter{
-    color: var(--grey);
-}
-
-.inputEmail{
-    border-radius: 20px;
 }
 
 .infoFooter{
