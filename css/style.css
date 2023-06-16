@@ -128,9 +128,15 @@ nav{
     }
 } 
   
+@media screen and (max-width: 205px) {
+    .titoloHeader {
+      font-size: 40px;
+    }
+}
+
 @media screen and (max-width: 170px) {
     .titoloHeader {
-      font-size: 30px;
+        font-size: 30px;
     }
 }  
 
@@ -174,7 +180,6 @@ nav{
         display: none;
        
     }
-
 
 }
 
@@ -226,11 +231,6 @@ nav{
     color: #333;
 }
 
-/* .accordion-container .tab input:checked ~ label::after{
-    transform: rotate(135deg);
-}  */
-
-
 .accordion-container .tab input:checked ~ label::after{
     transform: rotate(135deg);
     color: var(--white);
@@ -257,10 +257,13 @@ nav{
     color: var(--grey);
     z-index: 10;
 }
+  
 
-.accordion-container .tab h3::after{
+input[type="radio"]:checked ~ h3 {
     color: var(--white);
 }
+
+  
 .accordion-container .tab .content{
     max-height: 0;
     transition: 1s;
@@ -313,5 +316,12 @@ nav{
         justify-content: center;
         align-items: center;
     }
+
+@media (max-width: 160px){
+    .pFooter{
+       font-size: 14px;         
+    } 
+    
+}
 
 }

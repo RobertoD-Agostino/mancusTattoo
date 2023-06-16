@@ -70,8 +70,6 @@ nav{
 }
 
 
-
-
 /* FORM */
 .formRow{
     width: 2000px;
@@ -88,32 +86,111 @@ nav{
     color: aliceblue;
 }
 
-@media (max-width: 767px){
+.box {
+    width: 140px;
+    height: auto;
+    float: left;
+    transition: .5s linear;
+    position: relative;
+    display: block;
+    overflow: hidden;
+    padding: 15px;
+    text-align: center;
+    margin: 0 5px;
+    background: transparent;
+    text-transform: uppercase;
+    font-weight: 900;
+  }
+  
+  .box:before {
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 0;
+    height: 4px;
+    width: 100%;
+    border-bottom: 4px solid transparent;
+    border-left: 4px solid transparent;
+    box-sizing: border-box;
+    transform: translateX(100%);
+  }
+  
+  .box:after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    border-top: 4px solid transparent;
+    border-right: 4px solid transparent;
+    box-sizing: border-box;
+    transform: translateX(-100%);
+  }
+  
+  .box:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  }
+  
+  .box:hover:before {
+    border-color: var(--white);
+    height: 100%;
+    transform: translateX(0);
+    transition: .3s transform linear, .3s height linear .3s;
+  }
+  
+  .box:hover:after {
+    border-color: var(--white);
+    height: 100%;
+    transform: translateX(0);
+    transition: .3s transform linear, .3s height linear .5s;
+  }
+  
+  button {
+    color: var(--white);
+    text-decoration: none;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background: transparent;
+  }
+  
+
+@media screen and (min-width: 517px) and (max-width: 800px) {
+    .colForm{
+        width: 500px;
+    }
+}
+
+@media screen and (min-width: 378px) and (max-width: 516px) {
     .colForm{
         width: 400px;
     }
-    
 }
 
-@media (max-width: 400px){
+@media screen and (max-width: 400px){
     .colForm{
-        width: 250px;
+        width: 350px;
     }
-    
 }
+
+@media screen and (max-width: 353px){
+    .colForm{
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 300px){
+    .colForm{
+        width: 240px;
+    }
+}
+
 
 /* FOOTER */
 .footerRow{
     margin-top: 180px;
     background-color: var(--black);
-}
-
-.btnEmailFooter{
-    color: var(--grey);
-}
-
-.inputEmail{
-    border-radius: 20px;
 }
 
 .infoFooter{
