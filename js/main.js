@@ -1,11 +1,76 @@
-import * as hamburger from "../js/hamburger.js"; 
+// import * as hamburger from "../js/hamburger.js"; 
 // import * as accordion from "../js/accordion.js";
 // accordion.initAccordion()
-hamburger.initHamburger()
+// hamburger.initHamburger()
+
+// Definisci un oggetto che mappa le traduzioni per ogni lingua
+const translations = {
+  en: {
+    greeting: 'Welcome to Mancus Tattoo',
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quasi necessitatibus vero labore laboriosam sunt accusamus? Tenetur aspernatur ducimus voluptate accusantium, quod excepturi, porro totam aliquid eaque ratione aliquam sint!',
+    acc1: 'Hello',
+    p1: 'Hello, my name is Roberto',
+    acc2: 'Bau',
+    acc3: 'Kek',
+    footerSocial: 'Social',
+    footerContacts: 'Contacts',
+    footerPhone: 'Phone: 7894561230',
+    footerEmail: 'Email: fabrizio@gmail.com'
+  },
+  it: {
+    greeting: 'Benvenuti in Mancus Tattoo',
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quasi necessitatibus vero labore laboriosam sunt accusamus? Tenetur aspernatur ducimus voluptate accusantium, quod excepturi, porro totam aliquid eaque ratione aliquam sint!',
+    acc1: 'Ciao',
+    p1: 'Ciao, mi chiamo Roberto',
+    acc2: 'Bau',
+    acc3: 'Kek',
+    footerSocial: 'Social',
+    footerContacts: 'Contatti',
+    footerPhone: 'Cellulare: 7894561230',
+    footerEmail: 'Email: fabrizio@gmail.com'
+  }
+};
+
+// Funzione per impostare la lingua
+function setLanguage(languageCode) {
+  // Ottieni le traduzioni per la lingua selezionata
+  const translation = translations[languageCode];
+
+  // Verifica se le traduzioni sono disponibili
+  if (translation) {
+    // Cambia il testo in base alla lingua selezionata
+    document.getElementById('greeting').textContent = translation.greeting;
+    document.getElementById('description').textContent = translation.description;
+    document.getElementById('acc1').textContent = translation.acc1;
+    document.getElementById('p1').textContent = translation.p1;
+    document.getElementById('acc2').textContent = translation.acc2;
+    document.getElementById('acc3').textContent = translation.acc3;
+    document.getElementById('footer-social').textContent = translation.footerSocial;
+    document.getElementById('footer-contacts').textContent = translation.footerContacts;
+    document.getElementById('footer-phone').textContent = translation.footerPhone;
+    document.getElementById('footer-email').textContent = translation.footerEmail;
+  }
+}
+
+// Seleziona l'elemento select dal tuo HTML
+const languageSelect = document.getElementById('language-select');
+
+// Aggiungi un gestore di eventi per il cambio della lingua
+languageSelect.addEventListener('click', function(event) {
+  // Controlla se è stato cliccato un elemento con classe "dropdown-item"
+  if (event.target.classList.contains('dropdown-item')) {
+    // Ottieni il valore della lingua selezionata
+    const selectedLanguage = event.target.getAttribute('value');
+    
+    // Imposta la lingua selezionata
+    setLanguage(selectedLanguage);
+  }
+});
 
 
 
-//getting all required elements
+
+// getting all required elements
 // document.addEventListener('DOMContentLoaded', function() {
 //     const gallery  = document.querySelectorAll(".image"),
 // previewBox = document.querySelector(".preview-box"),

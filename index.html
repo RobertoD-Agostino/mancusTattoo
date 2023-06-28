@@ -36,7 +36,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mx-auto">
             <li class="nav-item">
-              <a class="nav-link textWhite" aria-current="page" href="#">Home</a>
+              <a class="nav-link textWhite " aria-current="page" href="#">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link textWhite" href="./galleria.html">Galleria</a>
@@ -44,9 +44,20 @@
             <li class="nav-item">
               <a class="nav-link textWhite" href="./form.html">Prenotazioni</a>
             </li>
+
+            <li class="nav-item dropdown" id="language-select">
+              <button class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                Seleziona lingua
+              </button>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <li><a class="dropdown-item" href="#" value="it">Italiano</a></li>
+                <li><a class="dropdown-item" href="#" value="en">English</a></li>
+              </ul>
+              
+            </li>
           </ul>
         </div>
-      </div>
+      </div>  
     </nav>
   
 
@@ -89,9 +100,10 @@
             <input type="radio" name="acc" id="acc1">
             <label for="acc1" data-target="content1"></label>
             <h2>01</h2>
-            <h3>MIAo</h3>
+            <h3>Ciao</h3>
             <div class="content" id="content1">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque facere voluptates dolores ea qui ipsum possimus harum minima consectetur commodi quidem minus numquam aliquid libero at quam, hic magnam! Ex?</p>
+              <p lang="it" id="p1">Ciao mi chiamo Roberto</p>
+              <!-- <p lang="en" id="p1">Hello my name is Roberto</p> -->
             </div>
           </div>
           <div class="tab my-3">

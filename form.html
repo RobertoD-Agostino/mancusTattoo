@@ -22,7 +22,7 @@
        <!-- NAVBAR -->
        <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
-          <a class="navbar-brand" href="">
+          <a class="navbar-brand" href="./index.html">
             <img src="./media/LogoNavbar.png" class="logoSito" alt="">
           </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -37,7 +37,7 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mx-auto">
               <li class="nav-item">
-                <a class="nav-link textWhite" aria-current="page" href="./index.html">Home</a>
+                <a class="nav-link textWhite " aria-current="page" href="./index.html">Home</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link textWhite" href="./galleria.html">Galleria</a>
@@ -45,22 +45,33 @@
               <li class="nav-item">
                 <a class="nav-link textWhite" href="./form.html">Prenotazioni</a>
               </li>
+  
+              <li class="nav-item dropdown" id="language-select">
+                <button class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                  Seleziona lingua
+                </button>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                  <li><a class="dropdown-item" href="#" value="it">Italiano</a></li>
+                  <li><a class="dropdown-item" href="#" value="en">English</a></li>
+                </ul>
+                
+              </li>
             </ul>
           </div>
-        </div>
+        </div>  
       </nav>
 
 
       <!-- FORM -->
     <div class="container">
-      <form class="d-flex justify-content-center contact-form" method="POST" name="emailContact" action="mail.php" id="contact-form">
+      <form class="d-flex justify-content-center contact-form" method="POST" name="emailContact" action="send.php" id="contact-form">
         <div class="row formRow justify-content-center">
 
           <div class="col-12 col-sm-3 colForm">
             <!-- nome - cognome -->
             <div class="col-12">
               <label for="exampleFormControlInput1" class="form-label titoli mb-1 mt-3">Nome completo</label>
-              <input type="text" class="form-control" id="nome" name="userName" required>
+              <input type="text" class="form-control" id="nome" name="subject" required>
             </div>
 
             <!-- email -->
@@ -72,7 +83,7 @@
             <!-- età -->
             <div class="col-12">
               <label for="exampleFormControlInput1" class="form-label titoli mb-1 mt-3">Età</label>
-              <input type="text" class="form-control" id="age" name="age" required>
+              <input type="text" class="form-control" id="age" name="message" required>
             </div>
 
             <!-- allergie -->
@@ -95,7 +106,6 @@
             </span>
             <div class="input-group mt-1">
               <input type="file" class="form-control" id="inputImg1" aria-describedby="inputGroupFileAddon04" aria-label="Upload" name="primaImg" required>
-              <!-- <button class="btn btn-outline-secondary" type="button" id="inputImg1">Invia</button> -->
             </div>   
             
             <!-- Campo immaggini idea -->
@@ -104,7 +114,6 @@
             </span>
             <div class="input-group mt-1">
               <input type="file" class="form-control" id="inputImg2" aria-describedby="inputGroupFileAddon04" aria-label="Upload" name="secondaImg" required > 
-              <!-- <button class="btn btn-outline-secondary" type="button" id="inputImg2">Invia</button> -->
             </div> 
 
             <!-- budget -->
@@ -126,7 +135,6 @@
             </div>
 
             <div class="col-12 text-center mt-4">
-              <!-- <input type="submit" class="submit" value="Send message" name="send"> -->
               <button type="submit" class="submit" value="Send message" name="send">
                 <span class="box">
                   Invia
@@ -138,7 +146,6 @@
         </div>
       </form>
     </div>
-
 
 
     <!-- FOOTER -->
